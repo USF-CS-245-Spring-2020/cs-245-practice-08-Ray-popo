@@ -1,8 +1,13 @@
-public class Node {
+public class Node
+{
     Comparable data;
-    Node left, right;
-    public Node(Comparable d) {
+    Node left;
+    Node right;
+
+    public Node(Comparable d)
+    {
         data = d;
-        left = right = null;
+        left = null;
+        right = null;
     }
 }

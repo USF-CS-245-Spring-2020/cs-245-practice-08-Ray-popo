@@ -22,6 +22,7 @@ public class BST<T>
         {
             return true;
         }
+        //using compareTo to find the correct item;
         if (item.compareTo(data.data) <0)
         {
             return find(data.left, item);
@@ -44,6 +45,8 @@ public class BST<T>
             Node newTree = new Node(item);
             return newTree;
         }
+        //compare Node data and item
+        //so make sure it is on the right position
         else if ((t.data).compareTo(item) < 0)
         {
             t.right = insertNode(t.right, item);
@@ -82,6 +85,8 @@ public class BST<T>
         {
             return null;
         }
+        //delete the selected data
+        //directly setting pointer from item left to right.right
         if ((t.data).compareTo(item) == 0)
         {
             if (t.left == null) {
@@ -111,7 +116,7 @@ public class BST<T>
         }
         return t;
     }
-
+    //checking the smallest or the min
     public Comparable MinRight (Node t)
     {
         if (t.left.left == null)
