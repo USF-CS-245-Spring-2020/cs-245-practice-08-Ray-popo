@@ -14,10 +14,12 @@ public class BST<T>
 
     public boolean find(Node data, Comparable item)
     {
+        //no item founded
         if (data == null)
         {
             return false;
         }
+        //found the item
         if (data.data == item)
         {
             return true;
@@ -46,7 +48,8 @@ public class BST<T>
             return newTree;
         }
         //compare Node data and item
-        //so make sure it is on the right position
+        //insert item into BST,
+        //duplicates in their own nodes
         else if ((t.data).compareTo(item) < 0)
         {
             t.right = insertNode(t.right, item);
@@ -85,7 +88,7 @@ public class BST<T>
         {
             return null;
         }
-        //delete the selected data
+        //delete the first instance of the item from the BST
         //directly setting pointer from item left to right.right
         if ((t.data).compareTo(item) == 0)
         {
